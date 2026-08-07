@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+	<title>portfolio with html css</title>
+</head>
+
+<body>
+	<header class="header">
+		<a href="#" class="logo">Hasib.</a>
+		<nav class="navbar">
+			<a href="#home">HOME</a>
+			<a href="#">SERVICES</a>
+			<a href="#certificates">CERTIFICATES</a>
+			<a href="#">CONTACT</a>
+			<a href="#">ABOUT</a>
+		</nav>
+	</header>
+	<section class="Home" id="home">
+		<div class="Home-content">
+			<h1>Hi I'm <span class="highlight">H</span>asebul <span class="highlight">H</span>ossain</h1>
+			<h3><span class="w-color">W</span>eb <span class="role-title"><span class="d-color">D</span>eveloper</span></h3>
+			<p>From Bhairab,Kishoreganj,Bangladesh.Studying in Daffodil International University,BSC in Software Egineering.And web development always fascinates me thats why I want to be full stack developer in future.</p>
+			<div class="btn-box">
+				<a href="#">Hire me</a>
+				<a href="#">Let's Talk</a>
+			</div>
+			
+		</div>
+		<div class="home-sci">
+			<a class="facebook" href="#" aria-label="Facebook" title="Facebook"><i class="bx bxl-facebook-circle"></i></a>
+			<a class="messenger" href="#" aria-label="Messenger" title="Messenger"><i class="bx bxl-messenger"></i></a>
+			<a class="whatsapp" href="#" aria-label="WhatsApp" title="WhatsApp"><i class="bx bxl-whatsapp"></i></a>
+			<button class="music-toggle" type="button" aria-label="Play background song" title="Play background song" aria-pressed="false">
+				<i class="bx bx-music"></i>
+			</button>
+		</div>
+		<div class ="image">
+			<img src="image hasib.jpg" class="boy" alt="Hasib portrait">
+		</div>
+		<audio id="background-song" src="nostalgia-by-johny-grimes.mp3" preload="none" loop></audio>
+	</section>
+
+	<section class="certificates" id="certificates">
+		<div class="section-heading">
+			<span>My Achievements</span>
+			<h2>Certificates</h2>
+		</div>
+
+		<div class="certificate-grid">
+			<article class="certificate-card">
+				<div class="certificate-preview">
+					<object data="HTML%20Certificate.pdf" type="application/pdf">
+						<a href="HTML%20Certificate.pdf" target="_blank" rel="noopener">Open HTML Certificate</a>
+					</object>
+				</div>
+				<div class="certificate-info">
+					<i class="bx bxl-html5"></i>
+					<h3>HTML Certificate</h3>
+					<p>Foundation certificate for HTML structure and web page markup.</p>
+					<a href="HTML%20Certificate.pdf" target="_blank" rel="noopener">View Certificate</a>
+				</div>
+			</article>
+
+			<article class="certificate-card">
+				<div class="certificate-preview">
+					<object data="CSS%20Certificate.pdf" type="application/pdf">
+						<a href="CSS%20Certificate.pdf" target="_blank" rel="noopener">Open CSS Certificate</a>
+					</object>
+				</div>
+				<div class="certificate-info">
+					<i class="bx bxl-css3"></i>
+					<h3>CSS Certificate</h3>
+					<p>Certificate for styling, layout, and responsive design basics.</p>
+					<a href="CSS%20Certificate.pdf" target="_blank" rel="noopener">View Certificate</a>
+				</div>
+			</article>
+
+			<article class="certificate-card">
+				<div class="certificate-preview">
+					<object data="CSS%20MASTERY%20Certificate.pdf" type="application/pdf">
+						<a href="CSS%20MASTERY%20Certificate.pdf" target="_blank" rel="noopener">Open CSS Mastery Certificate</a>
+					</object>
+				</div>
+				<div class="certificate-info">
+					<i class="bx bx-code-curly"></i>
+					<h3>CSS Mastery Certificate</h3>
+					<p>Advanced certificate for stronger CSS design and interface skills.</p>
+					<a href="CSS%20MASTERY%20Certificate.pdf" target="_blank" rel="noopener">View Certificate</a>
+				</div>
+			</article>
+
+			<article class="certificate-card">
+				<div class="certificate-preview">
+					<img src="certificate%20of%20cyber%20security.png" alt="Cyber Security Certificate">
+				</div>
+				<div class="certificate-info">
+					<i class="bx bx-shield-quarter"></i>
+					<h3>Cyber Security Certificate</h3>
+					<p>Certificate for cyber security fundamentals and digital safety skills.</p>
+					<a href="certificate%20of%20cyber%20security.png" target="_blank" rel="noopener">View Certificate</a>
+				</div>
+			</article>
+		</div>
+	</section>
+
+	<section class="skills-section" id="skills">
+		<div class="section-heading">
+			<span>What I Work With</span>
+			<h2>My Skills</h2>
+		</div>
+
+		<div class="skills-grid" aria-label="Skill levels">
+			<div class="skill-card">
+				<div class="skill-info">
+					<span>HTML</span>
+					<span>95%</span>
+				</div>
+				<div class="skill-bar" role="progressbar" aria-label="HTML skill level" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+					<div class="progress" style="--progress: 95%"></div>
+				</div>
+			</div>
+
+			<div class="skill-card">
+				<div class="skill-info">
+					<span>CSS</span>
+					<span>80%</span>
+				</div>
+				<div class="skill-bar" role="progressbar" aria-label="CSS skill level" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+					<div class="progress" style="--progress: 80%"></div>
+				</div>
+			</div>
+
+			<div class="skill-card">
+				<div class="skill-info">
+					<span>JavaScript</span>
+					<span>5%</span>
+				</div>
+				<div class="skill-bar" role="progressbar" aria-label="JavaScript skill level" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">
+					<div class="progress" style="--progress: 5%"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script>
+		const musicButton = document.querySelector('.music-toggle');
+		const backgroundSong = document.querySelector('#background-song');
+		const roleTitle = document.querySelector('.role-title');
+		const roles = ['Developer', 'Designer'];
+		let roleIndex = 0;
+
+		musicButton.addEventListener('click', () => {
+			if (backgroundSong.paused) {
+				backgroundSong.play()
+					.then(() => {
+						musicButton.classList.add('is-playing');
+						musicButton.setAttribute('aria-pressed', 'true');
+						musicButton.setAttribute('aria-label', 'Pause background song');
+						musicButton.setAttribute('title', 'Pause background song');
+					})
+					.catch(() => {
+						musicButton.setAttribute('aria-label', 'Play background song');
+						musicButton.setAttribute('title', 'Play background song');
+					});
+			} else {
+				backgroundSong.pause();
+				musicButton.classList.remove('is-playing');
+				musicButton.setAttribute('aria-pressed', 'false');
+				musicButton.setAttribute('aria-label', 'Play background song');
+				musicButton.setAttribute('title', 'Play background song');
+			}
+		});
+
+		setInterval(() => {
+			roleIndex = (roleIndex + 1) % roles.length;
+			const role = roles[roleIndex];
+
+			roleTitle.classList.add('is-changing');
+
+			setTimeout(() => {
+				roleTitle.innerHTML = `<span class="d-color">${role.charAt(0)}</span>${role.slice(1)}`;
+				roleTitle.classList.remove('is-changing');
+			}, 250);
+		}, 2000);
+	</script>
+</body>
+</html>
