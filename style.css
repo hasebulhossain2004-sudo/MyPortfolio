@@ -29,10 +29,7 @@ html {
 	justify-content: space-between;
 	align-items: center;
 	z-index: 8;
-	overflow-x:auto ;
 }
-.header::-webkit-scrollbar{
-	display: none;
 }
 .logo {
 	position: relative;
