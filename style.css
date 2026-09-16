@@ -28,22 +28,40 @@ html {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	z-index: 10;
+	z-index: 8;
+	overflow-x:auto ;
+}
+.header::-webkit-scrollbar{
+	display: none;
 }
 .logo {
+	position: relative;
 	font-size: 50px;
 	color: rgb(10, 145, 202);
 	text-decoration:rgb(11, 20, 35);
-	font-weight: 600;
+	font-weight: 800;
+	width: max-content;
+}
+.logo::after{
+	content:'';
+	background:linear-gradient(to right, rgb(11, 220, 199), rgb(151, 12, 238));
+	height: 5px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transition: 1s;
+}
+.logo:hover:after{
+	width: 0;
+
 }
 .navbar {
 	display: flex;
-	justify-content: flex-end;
 	align-items: center;
 	gap: 14px;
 	margin-left: auto;
 }
-
 .navbar a{
 	position: relative;
 	display: flex;
@@ -89,7 +107,7 @@ html {
 	top: 50%;
 	right: 7%;
 	transform: translateY(-50%);
-	z-index: 2;
+	z-index: 4;
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
@@ -300,9 +318,14 @@ html {
 }
 
 .certificate-grid {
-	display: grid;
+	display: flex;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: 24px;
+	overflow-x: auto;
+
+}
+.certificate-grid ::-webkit-scrollbar{
+	display: none;
 }
 
 .certificate-card {
@@ -312,7 +335,8 @@ html {
 	border-radius: 8px;
 	background: rgba(2, 18, 32, 0.72);
 	box-shadow: 0 18px 38px rgba(0, 0, 0, 0.3);
-	transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+	transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;\
+	animation: spin 5s infinite linear;
 }
 
 .certificate-card:hover {
@@ -325,6 +349,10 @@ html {
 	height: 260px;
 	background: linear-gradient(135deg, rgba(0, 171, 240, 0.22), rgba(244, 5, 120, 0.12));
 	border-bottom: 1px solid rgba(149, 226, 255, 0.22);
+	align-items: center;
+	justify-content: center;
+	gap: 1em;
+	flex: 0 0 5em;
 }
 
 .certificate-preview object,
