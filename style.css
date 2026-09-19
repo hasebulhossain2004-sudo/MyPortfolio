@@ -86,9 +86,9 @@ html {
 	background: transparent;
 	transform: translateY(-3px);
 }
-
 .navbar a::before {
-	content: "";
+	content: "<><><><><>";
+	color: #c9d9df;
 	position: absolute;
 	top: 0;
 	left: -100%;
@@ -490,7 +490,7 @@ html {
 }
 
 .skill-info span:last-child {
-	color: rgb(8, 248, 196);
+	color: rgb(22, 234, 188);
 }
 
 .skill-bar {
@@ -505,8 +505,8 @@ html {
 	width: 0;
 	height: 100%;
 	border-radius: inherit;
-	background: linear-gradient(90deg, #00abf0, #08f8c4, #f40578);
-	box-shadow: 0 0 16px rgba(8, 248, 196, 0.45);
+	background: linear-gradient(90deg, #00abf0, #08f8c4, #bc7698);
+	box-shadow: 0 0 16px rgba(11, 218, 197, 0.927);
 	animation: fill 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
