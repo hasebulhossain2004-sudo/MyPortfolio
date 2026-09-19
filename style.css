@@ -317,26 +317,51 @@ html {
 	line-height: 1.1;
 }
 
-.certificate-grid {
-	display: flex;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: 24px;
-	overflow-x: auto;
-
+.certificate-marquee {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	padding: 8px 0 16px;
+	mask-image: linear-gradient(
+		90deg,
+		transparent,
+		#000 8%,
+		#000 92%,
+		transparent
+	);
 }
-.certificate-grid ::-webkit-scrollbar{
-	display: none;
+
+.certificate-track {
+	display: flex;
+	align-items: stretch;
+	gap: 24px;
+	width: max-content;
+	animation: certificate-scroll 45s linear infinite;
+}
+
+.certificate-marquee:hover .certificate-track {
+	animation-play-state: paused;
+}
+
+@keyframes certificate-scroll {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
 }
 
 .certificate-card {
+	flex: 0 0 320px;
+	width: 320px;
 	position: relative;
 	overflow: hidden;
 	border: 2px solid rgba(125, 100, 100, 0.35);
 	border-radius: 8px;
 	background: rgba(2, 18, 32, 0.72);
 	box-shadow: 0 18px 38px rgba(0, 0, 0, 0.3);
-	transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;\
-	animation: spin 5s infinite linear;
+	transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .certificate-card:hover {
@@ -507,6 +532,17 @@ html {
 		animation-duration: 0.01ms;
 		animation-delay: 0s;
 	}
+
+	.certificate-track {
+		animation: none;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.certificate-card[aria-hidden="true"] {
+		display: none;
+	}
 }
 
 @media (max-width: 1100px) {
@@ -528,8 +564,9 @@ html {
 		font-size: 12px;
 	}
 
-	.certificate-grid {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
+	.certificate-card {
+		flex-basis: 300px;
+		width: 300px;
 	}
 }
 
@@ -599,8 +636,9 @@ html {
 		font-size: 34px;
 	}
 
-	.certificate-grid {
-		grid-template-columns: 1fr;
+	.certificate-card {
+		flex-basis: 280px;
+		width: 280px;
 	}
 
 	.certificate-preview {
@@ -616,4 +654,4 @@ html {
 	}
 }
 
-.
+
