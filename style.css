@@ -102,19 +102,16 @@ html {
 	left: 100%;
 }
 
-.home-sci {
-	position: absolute;
-	top: 50%;
-	right: 7%;
-	transform: translateY(-50%);
-	z-index: 4;
+
+.footer-social {
 	display: flex;
-	flex-direction: column;
-	gap: 16px;
+	justify-content: center;
+	align-items: center;
+	gap: 18px;
 }
 
-.home-sci a,
-.home-sci button {
+.footer-social a,
+.footer-social button {
 	width: 52px;
 	height: 52px;
 	color: #dff8ff;
@@ -133,34 +130,41 @@ html {
 	transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
 }
 
-.home-sci a:hover,
-.home-sci button:hover {
+.footer-social a:hover,
+.footer-social button:hover {
 	transform: translateX(-5px) scale(1.08);
 	box-shadow: 0 15px 34px rgba(0, 171, 240, 0.32);
 	border-color: #fff;
 }
 
-.home-sci .facebook:hover {
+.footer-social .facebook:hover {
 	background: #1877f2;
 }
 
-.home-sci .messenger:hover {
-	background: linear-gradient(135deg, #0099ff, #a033ff, #ff5280);
+.footer-social .linkedin:hover {
+	background: #0a66c2;
 }
 
-.home-sci .whatsapp:hover {
+.footer-social .whatsapp:hover {
 	background: #25d366;
 }
 
-.home-sci .music-toggle {
+.footer-social .music-toggle {
 	padding: 0;
 	font-family: inherit;
 	background: linear-gradient(135deg, rgba(0, 153, 255, 0.74), rgba(160, 51, 255, 0.7), rgba(255, 82, 128, 0.74));
 }
 
-.home-sci .music-toggle:hover,
-.home-sci .music-toggle.is-playing {
+.footer-social .music-toggle:hover,
+.footer-social .music-toggle.is-playing {
 	background: linear-gradient(135deg, #0099ff, #a033ff, #ff5280);
+}
+
+.footer-social a:focus-visible,
+.footer-social button:focus-visible,
+.footer-details a:focus-visible {
+	outline: 3px solid #08f8c4;
+	outline-offset: 4px;
 }
 .Home {
 	position: relative;
@@ -463,6 +467,104 @@ html {
 		radial-gradient(circle at bottom left, rgba(244, 5, 120, 0.14), transparent 34%);
 }
 
+.site-footer {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+	color: #e6ebed;
+	background: #021220;
+	border-top: 1px solid rgba(149, 226, 255, 0.18);
+}
+
+.site-footer::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	pointer-events: none;
+	background: radial-gradient(
+		circle 190px at var(--footer-mouse-x, 50%) var(--footer-mouse-y, 50%),
+		rgba(5, 210, 251, 0.36),
+		rgba(0, 171, 240, 0.16) 42%,
+		transparent 78%
+	);
+	opacity: 0;
+	transition: opacity 0.25s ease;
+}
+
+.site-footer.is-pointer-active::before {
+	opacity: 1;
+}
+
+.footer-main {
+	position: relative;
+	z-index: 1;
+	padding: 76px 7% 54px;
+	background: transparent;
+}
+
+.footer-heading {
+	margin-bottom: 28px;
+	text-align: center;
+}
+
+.footer-heading span {
+	color: rgb(8, 248, 196);
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.footer-heading h2 {
+	margin: 10px 0 0;
+	color: #e6ebed;
+	font-size: 34px;
+}
+
+.footer-bottom {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 24px;
+	padding: 24px 7%;
+	background: transparent;
+	border-top: 1px solid rgba(149, 226, 255, 0.18);
+}
+
+.footer-bottom p {
+	margin: 0;
+	color: #c9d9df;
+	font-size: 15px;
+}
+
+.footer-details {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	gap: 8px 20px;
+	color: #c9d9df;
+	font-size: 15px;
+	text-align: right;
+}
+
+.footer-details strong {
+	color: #08f8c4;
+}
+
+.footer-details a {
+	color: #c9d9df;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.footer-details a:hover {
+	color: #05d2fb;
+}
+
 .skills-grid {
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -619,15 +721,6 @@ html {
 		text-align: center;
 	}
 
-	.home-sci {
-		position: relative;
-		top: auto;
-		right: auto;
-		transform: none;
-		flex-direction: row;
-		margin: 28px auto 0;
-	}
-
 	.certificates {
 		padding: 90px 7% 50px;
 	}
@@ -652,6 +745,19 @@ html {
 	.skills-grid {
 		grid-template-columns: 1fr;
 	}
+
+	.footer-main {
+		padding: 64px 7% 44px;
+	}
+
+	.footer-bottom {
+		align-items: flex-start;
+		flex-direction: column;
+		padding: 22px 7%;
+	}
+
+	.footer-details {
+		justify-content: flex-start;
+		text-align: left;
+	}
 }
-
-

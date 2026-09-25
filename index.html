@@ -29,18 +29,9 @@
 			</div>
 			
 		</div>
-		<div class="home-sci">
-			<a class="facebook" href="#" aria-label="Facebook" title="Facebook"><i class="bx bxl-facebook-circle"></i></a>
-			<a class="messenger" href="#" aria-label="Messenger" title="Messenger"><i class="bx bxl-messenger"></i></a>
-			<a class="whatsapp" href="#" aria-label="WhatsApp" title="WhatsApp"><i class="bx bxl-whatsapp"></i></a>
-			<button class="music-toggle" type="button" aria-label="Play background song" title="Play background song" aria-pressed="false">
-				<i class="bx bx-music"></i>
-			</button>
-		</div>
 		<div class ="image">
 			<img src="image hasib.jpg" class="boy" alt="Hasib portrait">
 		</div>
-		<audio id="background-song" src="nostalgia-by-johny-grimes.mp3" preload="none" loop></audio>
 	</section>
 
 	<section class="certificates" id="certificates">
@@ -229,12 +220,53 @@
 		</div>
 	</section>
 
+	<footer class="site-footer">
+		<div class="footer-main">
+			<div class="footer-heading">
+				<span>Let's connect</span>
+				<h2>Find me online</h2>
+			</div>
+
+			<div class="footer-social" aria-label="Social links">
+				<a class="facebook" href="#" aria-label="Facebook" title="Facebook"><i class="bx bxl-facebook-circle"></i></a>
+				<a class="linkedin" href="#" aria-label="LinkedIn" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+				<a class="whatsapp" href="#" aria-label="WhatsApp" title="WhatsApp"><i class="bx bxl-whatsapp"></i></a>
+				<button class="music-toggle" type="button" aria-label="Play background song" title="Play background song" aria-pressed="false">
+					<i class="bx bx-music"></i>
+				</button>
+			</div>
+		</div>
+
+		<div class="footer-bottom">
+			<p>Copyright © 2026</p>
+			<div class="footer-details">
+				<span>Designed by <strong>Hasebul Hossian</strong></span>
+				<a href="tel:01618967627">01618967627</a>
+				<span>Savar, Birulia, Dhaka</span>
+			</div>
+		</div>
+		<audio id="background-song" src="nostalgia-by-johny-grimes.mp3" preload="none" loop></audio>
+	</footer>
+
 	<script>
+		const siteFooter = document.querySelector('.site-footer');
 		const musicButton = document.querySelector('.music-toggle');
 		const backgroundSong = document.querySelector('#background-song');
 		const roleTitle = document.querySelector('.role-title');
 		const roles = ['Developer', 'Designer'];
 		let roleIndex = 0;
+
+		siteFooter.addEventListener('pointermove', (event) => {
+			const footerBounds = siteFooter.getBoundingClientRect();
+
+			siteFooter.style.setProperty('--footer-mouse-x', `${event.clientX - footerBounds.left}px`);
+			siteFooter.style.setProperty('--footer-mouse-y', `${event.clientY - footerBounds.top}px`);
+			siteFooter.classList.add('is-pointer-active');
+		});
+
+		siteFooter.addEventListener('pointerleave', () => {
+			siteFooter.classList.remove('is-pointer-active');
+		});
 
 		musicButton.addEventListener('click', () => {
 			if (backgroundSong.paused) {
